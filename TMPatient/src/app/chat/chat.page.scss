@@ -1,0 +1,153 @@
+.outer {
+    height: auto;
+}
+
+.q {
+    border-radius: 20px;
+    background: lightgray;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 0px;
+	max-width: 70%;
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    position: relative;
+}
+.q:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: lightgray;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -0px;
+	margin-top: -15px;
+}
+
+.a {
+    border-radius: 20px;
+    background: var(--col-bk-cyan);
+    border-color: grey;
+    border-style: solid;
+    border-width: 0px;
+	max-width: 70%;
+    //display: block;
+    padding: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+    position: relative;
+}
+.a:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 90%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: var(--col-bk-cyan);
+	border-top: 0;
+	border-right: 0;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.question_area {
+    width: 100%;
+    position: relative;
+    float: bottom;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: grey;
+    display: table-cell !important;
+    float:left; 
+    margin: 5px;
+}
+
+.qa_highlighted {
+    background-color: #F8F8F8;
+    padding: 5px 5px 5px 5px;
+}
+
+.qa_normal {
+    padding: 5px 5px 5px 5px;
+}
+
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+      opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+      opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+      opacity: .2;
+    }
+}
+
+.saving {
+    margin: 10px;
+}
+.saving div {
+    display: !important ;
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+}
+
+.saving div:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.saving div:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
+}

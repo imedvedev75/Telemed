@@ -1,0 +1,11 @@
+<div class='q'>
+  <div class='q2'>
+    {{q.q}}
+  </div>
+</div>
+
+<div class="inner-content">
+  <ion-button shape="round" expand="block" *ngFor="let o of q.opts;" (click)="click(o)">
+    {{o}}
+  </ion-button>
+</div>

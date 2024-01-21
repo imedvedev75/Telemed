@@ -1,0 +1,52 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='ion-padding'>
+
+  <ion-list>
+  <!--
+    <div *ngFor='let i of items' (click)='click(i)'>
+      <div>
+        <div class='q'>
+          {{i.q}}
+        </div>
+      </div>
+      <div align='right'> 
+        <div class='a' align='left'>
+          {{i.a}}
+        </div>
+      </div>        
+    </div>
+  -->
+    <div *ngFor='let a of answers; let i = index' (click)='edit_answer(i)' [ngClass]='getQAClass(i)'>
+      <div>
+        <div class='q' align='left'>{{questions[i].q}}</div>
+      </div>
+      <div align='right'>
+        <div *ngIf='a!=-1' class='a' align='right'>{{questions[i].opts[a]}}</div>
+      </div>
+    </div>
+    <div class="saving" *ngIf='animation'>
+      <div class='dot'></div>
+      <div class='dot'></div>
+      <div class='dot'></div>
+    </div>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer class='ion-padding'>
+  <div *ngIf="currQ!=-1">
+    <ion-button expand="block" *ngFor="let o of questions[currQ].opts; let i = index" (click)="sel_answer(i)">
+      {{o}}
+    </ion-button>
+  </div>
+  <div *ngIf='finished && currQ==-1'>
+    <p style='font-size: fit-width'>You have completed your profile! You can finally correct your answers or</p> 
+    <ion-button (click)='proceed()' expand='block'>Proceed to therapy</ion-button>
+  </div>
+</ion-footer>
+

@@ -1,0 +1,35 @@
+
+#videoRemote {
+    width: 48%;
+}
+
+#videoLocal {
+    width: 48%;
+    margin-right: 10px;
+}
+
+#sepDiv {
+    width: 4%;
+}
+
+#remotemedia {
+    width: 100%;
+}
+
+#localmedia {
+    max-width: 50%;
+}
+
+#audio {
+    display: none;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+}
+
+.image {
+    max-width: 100px;
+    vertical-align: top;
+}

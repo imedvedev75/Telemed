@@ -1,0 +1,26 @@
+.image {
+    width:100%;
+    vertical-align: top;
+}
+
+.li {
+    padding-bottom: 1em;
+}
+
+.bottom-left {
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-align:center;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}

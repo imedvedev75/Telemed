@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-statusbar","cordova-plugin-device","cordova-plugin-splashscreen","cordova-plugin-ionic-webview","cordova-plugin-ionic-keyboard","cordova-plugin-android-permissions","cordova.plugins.diagnostic","cordova-custom-config","cordova-plugin-crosswalk-webview","cordova-sqlite-storage"]}

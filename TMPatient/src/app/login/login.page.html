@@ -1,0 +1,40 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <!--<ion-button (click)="close()"><ion-icon name="close"></ion-icon></ion-button>-->
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="--padding-top: 0px"> 
+<img src="assets/images/hotline2.png">
+<!--<div class="inner-content">-->
+  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+    <ion-list >
+      <!--<ion-item lines="none">-->
+        <!--<ion-label position="stacked">Email:</ion-label>-->
+        <ion-input placeholder="email" name="emailField" id="emailField" type="text" required="true" 
+        [(ngModel)]="emailText" #email="ngModel" #emailField></ion-input>
+      <!--</ion-item>-->
+      <br>
+      <!--<ion-item lines="none">-->
+        <!--<ion-label position="stacked">Password:</ion-label>-->
+        <ion-input placeholder="password" name="passwordField" id="passwordField" type="password" required="true" 
+        [(ngModel)]="passwordText" #password="ngModel" #passwordField></ion-input>
+      <!--</ion-item>-->
+    </ion-list>
+    <br>
+    <ion-button class="submit-btn" shape="round" expand="block" type="submit" [disabled]="!loginForm.form.valid">Login</ion-button>
+    <!--<ion-button (click)="register()" >Register</ion-button>-->
+    <br>
+    <div class="ion-text-center"><ion-text>Do not have an account? <a routerLink="/register" >Register</a></ion-text></div>
+  </form>
+<!--</div>-->
+</ion-content>
+
+<ion-footer>
+    <ion-title>{{footer}}</ion-title>
+</ion-footer>

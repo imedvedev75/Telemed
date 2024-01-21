@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()"><ion-icon name="exit"></ion-icon></ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)='answer()' [disabled]='btnAnswerDisabled()'>Answer</ion-button>
+  <ion-button (click)='hangup()' [disabled]='btnHangupDisabled()'>Hangup</ion-button>
+  <br>
+  <ion-button (click)='answerTwilio()'>Answer Twilio</ion-button>
+  <ion-button (click)='hangupTwilio()'>Hangup Twilio</ion-button>
+<!--<div #localmedia id="local-media"></div>-->
+  <div #remotemedia id="remote-media"></div>
+  <video controls autoplay #video id="video" [style.display]="inCall ? 'block' : 'none'"></video>
+  <audio #audio id="audio"></audio>  
+</ion-content>

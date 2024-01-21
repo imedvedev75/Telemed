@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Find your psychologist</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()"><ion-icon name="exit"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div id="doc" *ngFor = "let doc of docs;" (click)='click(doc)'>
+      <ion-grid>
+          <ion-row align-items-stretch>
+            <ion-col align-self-center>
+              <div class="img-container">
+                <img src="{{doc.img}}" class="image">
+                <div class="bottom-left"><h1>{{doc.name}}</h1></div>
+              </div>
+            </ion-col>
+            <ion-col align-self-center>
+              <ion-grid>
+                <ion-row align-items-center>
+                  <ul style="list-style-type:disc;" >
+                      <li class='li' *ngFor = "let spec of doc.specs;">{{spec}}</li>
+                  </ul>
+                </ion-row>
+                <ion-row align-items-center>
+                  <ion-col class="center">
+                    <div id="review">
+                      <img src="assets/images/5-star.jpg">
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
+
+</ion-content>

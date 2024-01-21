@@ -1,0 +1,7 @@
+{
+  "name": "TMio5",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

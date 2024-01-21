@@ -1,0 +1,11 @@
+.idea/
+__pycache__/
+node_modules
+.sourcemaps
+plugins
+resources
+www
+platforms
+e2e
+config.ini
+deploy

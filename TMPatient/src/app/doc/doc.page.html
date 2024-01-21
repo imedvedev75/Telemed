@@ -1,0 +1,48 @@
+
+<ion-header no-border>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+    <ion-title>
+    <ion-grid>
+      <ion-row class="ion-align-items-stretch" size='auto'>
+        <ion-col class="ion-align-self-center" size='auto'>
+          <div class="img-container">
+            <img src="{{gv.doc.img}}" class="image">
+          </div>          
+        </ion-col>
+        <ion-col class="ion-align-self-center">
+          {{gv.doc.name}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!--{{message}}<br>
+  <ion-input placeholder="myName" name="myName" type="text" required="true" autofocus="true"
+    [(ngModel)]="myName" #myNameField></ion-input>
+  -->
+    
+  <ion-button (click)='join()'>Join Call</ion-button>
+  <ion-button (click)='hangup()'>Leave</ion-button>
+    
+  <!--
+  <ion-button (click)='callTwilio()'>Call Twilio</ion-button>
+  <ion-button (click)='hangupTwilio()'>Hangup Twilio</ion-button>
+  -->
+  <!--<div #localmedia id="local-media"></div>-->
+  <div #remotemedia id="remotemedia"></div>
+  <div #localmedia id="localmedia"></div>
+<br>
+<!--[style.display]="inCall ? 'block' : 'none'"-->
+
+<video controls autoplay #videoLocal id="videoLocal" ></video>
+<video controls autoplay #videoRemote id="videoRemote" ></video>
+<audio #audioRemote id="audioRemote"></audio>
+
+<!--<audio #audioLocal id="audioLocal"></audio>-->
+</ion-content>
